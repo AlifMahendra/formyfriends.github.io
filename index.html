@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body class="px-4 pt-5 bg-slate-50 relative">
+
+    <!-- box pesaan -->
+    <div class="w-full flex bg-slate-100 items-center justify-center px-2 py-2 rounded shadow-md">
+        <div class="flex py-3 items-center flex-col">
+            <ion-icon class="text-5xl text-white bg-black mb-3 p-2 rounded-md" name="chatbox-ellipses-sharp"></ion-icon>
+            <h1 class="font-semibold text-xl">pesan dari alip</h1>
+            <p class="text-sm text-center max-w-xs mt-1">nih yang mau baca pesapesan kecing dari alip yang kecing juga
+                hehehehe</p>
+        </div>
+    </div>
+
+    <!-- box permintaan maaf -->
+    <div class="flex justify-between mt-2">
+
+        <!-- box pertama -->
+        <div class="w-full z-0 bg-blue-100 p-3 rounded-md flex flex-col items-center shadow-md duration-700">
+            <ion-icon class="text-4xl text-white bg-black p-2 mb-3 rounded-md" name="alert-circle-sharp"></ion-icon>
+            <h1 class="font-semibold text-base">permintaan maap</h1>
+            <p class="text-sm text-center max-w-xs mt-1 text-xs">isinya permintaan maap dari alip semua jadi yang
+                merasa alip kek anjing buka ini</p>
+            <div class="w-full py-2 cursor-pointer rounded-md bg-blue-600 text-white font-medium text-center mt-3 shadow"
+                onclick="maapSlide()">buka pesan
+            </div>
+
+
+        </div>
+
+        <!-- space -->
+        <div class="p-1"></div>
+
+        <!-- box kedua -->
+        <div class="w-full bg-green-100 p-3 rounded-md flex flex-col items-center shadow-md duration-700">
+            <ion-icon class="text-4xl text-white bg-black p-2 mb-3 rounded-md" name="happy-outline"></ion-icon>
+            <h1 class="font-semibold text-base">permintaan alip</h1>
+            <p class="text-sm text-center max-w-xs mt-1 text-xs">ini isinya permintaanya dan apa yang alip kepengen
+                hehehe, bismillah di buka</p>
+            <div onclick="attSlide()"
+                class="w-full cursor-pointer py-2 rounded-md bg-green-600 text-white font-medium text-center mt-3 shadow">
+                buka pesan
+            </div>
+        </div>
+    </div>
+
+    <!-- iklan -->
+    <div class="w-full p-2 rounded-md shadow-md flex items-center bg-slate-100 my-1">
+        <ion-icon class="mr-1 text-xl" name="notifications-sharp"></ion-icon>
+        <h1 class="text-xs max-w-xs">yang mau dibikinin website gini kontak aja alip, gratis kok ga usah bayar</h1>
+    </div>
+
+    <!-- absolute point -->
+    <div class="w-full relative overflow-hidden ">
+
+        <!--  -->
+        <div id="maap" class="mt-2 absolute py-4 -top-80 px-4 rounded-md z-10 bg-blue-100 duration-700 relative">
+            <h1 class="font-bold">dear all . . . .</h1>
+            <p class="text-xs mt-3">"aku cuman mau bilang mintaa maaf banget kalo selama ini aku gatel banget di hadapan
+                kalian, sebenernya kau ga ada maksud buruk ke kalian, jadi mohon banget maapin alip yang kek anjing ini,
+                sebenrnya aku kalo usil dan jahil ke kalian itu aku ga ada maksud apa apa jadi kalo kalian ada yang
+                baper
+                dengan omongaku maapin aku yah"
+            </p>
+            <div onclick="maapClose()" class="p-2 rounded-md mt-3 bg-blue-600 text-white font-medium">
+                tutup pesan
+            </div>
+        </div>
+
+        <!--  -->
+        <div id="att" class="mt-1 absolute py-4 -bottom-80 px-4 rounded-md z-10 bg-green-100 duration-700 relative">
+            <h1 class="font-bold">dear all . . . .</h1>
+            <p class="text-xs mt-3">"ga ada permintaan sii hehehe, mungkin permintaan gwe adalah, tetep jadi temen gwe
+                yang paling keren, udah sii bingung mau ngetik apa lagi, dan makasih udah jadi temenku"
+            </p>
+            <div onclick="attClose()" class="p-2 rounded-md mt-3 bg-green-600 text-white font-medium">
+                tutup pesan
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var maap = document.getElementById("maap");
+        var attention = document.getElementById("att");
+
+        function maapSlide() {
+
+            console.log("kentod");
+            maap.classList.remove("-top-80");
+            maap.classList.add("top-0");
+        }
+        function maapClose() {
+            maap.classList.remove("top-0")
+            maap.classList.add("-top-80");
+        }
+
+        function attSlide() {
+
+            attention.classList.remove("-bottom-80");
+            attention.classList.add("bottom-0");
+        }
+        function attClose() {
+            attention.classList.remove("bottom-0")
+            attention.classList.add("-bottom-80");
+        }
+    </script>
+</body>
+
+</html>
